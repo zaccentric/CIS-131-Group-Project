@@ -5,6 +5,42 @@
     <title>Dining at name pending!</title>
   <head>
   <body>
+  <script>
+	  var noteStore = ["", "", "", "", ""];
+	  var i = 0;
+	  var indexNum = "";
+	  
+	  //Insert the loop below this line:
+	  
+	  var submitButton = document.getElementById("button");
+	  
+	  if (submitButton.addEventListener){
+		 submitButton.addEventListener("click", noteWrite, false);
+	  } else if (submitButton.attachEvent){
+			submitButton.attachEvent("onclick", noteWrite);
+	  }
+  </script>
     <h1>Dining at Name Pending</h1>
+	<div>
+	<p id="resultsExpl"></p>
+		<ul>
+			<li id="index0"></li>
+			<li id="index1"></li>
+			<li id="index2"></li>
+			<li id="index3"></li>
+			<li id="index4"></li>
+		</ul>
+	</div>
+	<form>
+		<fieldset>
+			<label for="noteSubmit" id="placeLabel">
+				Input your Notes here:
+			</label>
+				<input type="text" id="noteSubmit" />
+		</fieldset>
+		<fieldset>
+				<button type="button" id="button" onclick="addNotes()">Add Note</button>
+		</fieldset>
+	</form>
   </body>
 </html>
