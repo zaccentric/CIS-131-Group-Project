@@ -7,7 +7,9 @@
 	-->
     <meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+	<link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css"/>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 	<title>Places to Stay</title>
   </head>
   <body>
@@ -62,7 +64,7 @@
       </form>
 	</article>
 	<script>
-    function calcTotal(){
+    function calcTotal1(){
       var itemTotal = 0;
       var lNight1 = document.getElementById("lNight1");
       var lNight2 = document.getElementById("lNight2");
@@ -78,10 +80,9 @@
       var stayTotal = itemTotal + (itemTotal * salesTaxRate);
       alert("The Total Cost of Your Stay Will Be $" + stayTotal);
     }
-    document.getElementById("submit1").addEventListener("click", calcTotal, false);
-   </script>
-   <script>
-   function calcTotal(){
+    document.getElementById("submit1").addEventListener("click", calcTotal1, false);
+
+   function calcTotal2(){
       var itemTotal = 0;
       var sNight1 = document.getElementById("sNight1");
       var sNight2 = document.getElementById("sNight2");
@@ -97,10 +98,9 @@
       var stayTotal = itemTotal + (itemTotal * salesTaxRate);
       alert("The Total Cost of Your Stay Will Be $" + stayTotal);
     }
-    document.getElementById("submit2").addEventListener("click", calcTotal, false);
-   </script>
-   <script>
-   function calcTotal(){
+    document.getElementById("submit2").addEventListener("click", calcTotal2, false);
+
+   function calcTotal3(){
       var itemTotal = 0;
       var aNight1 = document.getElementById("aNight1");
       var aNight2 = document.getElementById("aNight2");
@@ -116,7 +116,7 @@
       var stayTotal = itemTotal + (itemTotal * salesTaxRate);
       alert("The Total Cost of Your Stay Will Be $" + stayTotal);
     }
-    document.getElementById("submit3").addEventListener("click", calcTotal, false);
+    document.getElementById("submit3").addEventListener("click", calcTotal3, false);
 	</script>
   </body>
 </html>
