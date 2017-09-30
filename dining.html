@@ -1,12 +1,68 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <!-- Geisler Lippmann -->
-    <meta charset="utf-8">
-    <title>Dining at name pending!</title>
-  <head>
-  <body>
-    <h1>Dining at Name Pending!</h1>
+<head>
+	<!--
+	
+	Geisler 
+	-->
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css"/>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+	<title>Dining at name pending!</title>
+</head>
+<body>
+	<h1>Dining at Name Pending!</h1>
     <p>by Geisler Lippmann</p>
-  </body>
+	<div>
+		<p id="resultsExpl"></p>
+		<ul>
+             <li id="index0"></li>
+             <li id="index1"></li>
+             <li id="index2"></li>
+             <li id="index3"></li>
+             <li id="index4"></li>
+          </ul>
+	</div>
+	<form>
+          <fieldset>
+            <label for="noteSubmit" id="placeLabel">
+              Input your Notes here:
+            </label>
+            <input type="text" id="noteSubmit" />
+          </fieldset>
+          <fieldset>
+            <button type="button" id="button" onclick="addNotes()">Add Note</button>
+          </fieldset>
+      </form>
+<script>
+	  var noteStore = ["", "", "", "", ""];
+	  var i = 0;
+	  var indexNum = "";
+	  
+	  
+	  function noteWrite() {
+	  
+	  if (i <= 4) {
+	     var indexNum = "index" + i;
+		 
+		 noteStore[i] = document.getElementById("noteSubmit").value;
+		  document.getElementById(indexNum).innerHTML = noteStore[i];
+		 document.getElementById("noteSubmit").value = " ";
+		 
+		 if (i == 4) {
+		    document.getElementById("resultsExpl").innerHTML = "Your Notepad is Full... press F5 to refresh your notes.";
+		 }
+	  i++;
+	  }
+	  }
+	  var submitButton = document.getElementById("button");
+	  
+	  if (submitButton.addEventListener){
+		 submitButton.addEventListener("click", noteWrite, false);
+	  } else if (submitButton.attachEvent){
+			submitButton.attachEvent("onclick", noteWrite);
+	  }
+</script>
+</body>
 </html>
