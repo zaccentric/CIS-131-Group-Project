@@ -11,57 +11,142 @@
     <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
     <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 	<title>Places to Stay</title>
+	<style>
+		#title {
+			text-align: center;
+		}
+		#col1, #col2, #col3 {
+			padding: 50px;
+			background-color: lightgray;
+			margin: 20px 0px 20px 0px;
+		}
+		#col1 {
+			background: url("images/fancy.jpg");
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: 700px;
+		}
+		#col2 {
+			background: url("images/average.jpg");
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: 700px;
+		}
+		#col3 {
+			background: url("images/poor.jpg");
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: 700px;
+		}
+		.container {
+			background-color: gray;
+			
+		}
+		body {
+			background-image: url("images/cabin.jpg");
+		}
+		#info {
+			color: white;
+			text-shadow: 1px 1px 5px black;
+		}
+	</style>
   </head>
   <body>
+  <div class="jumbotron">
 	<header>
-	  <h1>Affordable Luxury</h1>
+	  <h1 id="title">RedWood Resort</h1>
+	  <h3 id="title">Lodging</h3>
 	</header>
+	<div class="btn-group btn-group-justified" role="group" aria-label="...">
+		<div class="btn-group" role="group">
+			<button type="button" class="btn btn-danger">Dining</button>
+		</div>
+		<div class="btn-group" role="group">
+			<button type="button" class="btn btn-danger">Home</button>
+		</div>
+		<div class="btn-group" role="group">
+			<button type="button" class="btn btn-danger">Lodging</button>
+		</div>
+	</div>
+  </div>
 	<article>
-	  <h2>Luxury Suites</h2>
-	  <h3>$200.00 Nightly</h3>
-	  <form>
-         <input type="radio" id="lNight1" value="8" />
-         <label for="room1">1 Night </label>
-         <input type="radio" id="lNight2" value="8" />
-         <label for="room1">2 Nights </label>
-		 <input type="radio" id="lNight3" value="8" />
-         <label for="room1">3 Nights </label>
-		 <input type="radio" id="lNight4" value="8" />
-         <label for="room1">4 Nights </label>
-		 <input type="radio" id="lNight5" value="8" />
-         <label for="room1">5 Nights </label>
-         <input type="submit" id="submit1" value="Submit" />
-      </form>
-	  <h2>Standard Suites</h2>
-	  <h3>$120.00 Nightly</h3>
-	  <form>
-         <input type="radio" id="sNight1" value="8" />
-         <label for="room1">1 Night </label>
-         <input type="radio" id="sNight2" value="8" />
-         <label for="room1">2 Nights </label>
-		 <input type="radio" id="sNight3" value="8" />
-         <label for="room1">3 Nights </label>
-		 <input type="radio" id="sNight4" value="8" />
-         <label for="room1">4 Nights </label>
-		 <input type="radio" id="sNight5" value="8" />
-         <label for="room1">5 Nights </label>
-         <input type="submit" id="submit2" value="Submit" />
-      </form>
-	  <h2>Affordable Suites</h2>
-	  <h3>$80.00 Nightly</h3>
-	  <form>
-         <input type="radio" id="aNight1" value="8" />
-         <label for="room1">1 Night </label>
-         <input type="radio" id="aNight2" value="8" />
-         <label for="room1">2 Nights </label>
-		 <input type="radio" id="aNight3" value="8" />
-         <label for="room1">3 Nights </label>
-		 <input type="radio" id="aNight4" value="8" />
-         <label for="room1">4 Nights </label>
-		 <input type="radio" id="aNight5" value="8" />
-         <label for="room1">5 Nights </label>
-         <input type="submit" id="submit3" value="Submit" />
-      </form>
+		<div class="container">
+			<div id="col1" class="col-lg-12 col-md-12 col-sm-12 col-sx-12">
+			  <h2 id="info">Luxury Suites</h2>
+			  <h3 id="info">$200.00 Nightly</h3>
+			  <form>
+				 <div class="btn-group" data-toggle="buttons">
+				  <label class="btn btn-default">
+					<input type="radio" name="options" id="lNight1" autocomplete="off">1 Night
+				  </label>
+				  <label class="btn btn-default">
+					<input type="radio" name="options" id="lNight2" autocomplete="off">2 Nights
+				  </label>
+				  <label class="btn btn-default">
+					<input type="radio" name="options" id="lNight3" autocomplete="off">3 Nights
+				  </label>
+				  <label class="btn btn-default">
+					<input type="radio" name="options" id="lNight4" autocomplete="off">4 Nights
+				  </label>
+				  <label class="btn btn-default">
+					<input type="radio" name="options" id="lNight5" autocomplete="off">5 Nights
+				  </label>
+				</div>
+				<br>
+				 <button type="button" class="btn btn-warning" id="submit1" value="Submit">Check Price</button>
+			  </form>
+			</div>
+			<div id="col2" class="col-lg-12 col-md-12 col-sm-12 col-sx-12">
+			  <h2 id="info">Standard Suites</h2>
+			  <h3 id="info">$120.00 Nightly</h3>
+			  <form>
+				 <div class="btn-group" data-toggle="buttons">
+				  <label class="btn btn-default">
+					<input type="radio" name="options" id="sNight1" autocomplete="off">1 Night
+				  </label>
+				  <label class="btn btn-default">
+					<input type="radio" name="options" id="sNight2" autocomplete="off">2 Nights
+				  </label>
+				  <label class="btn btn-default">
+					<input type="radio" name="options" id="sNight3" autocomplete="off">3 Nights
+				  </label>
+				  <label class="btn btn-default">
+					<input type="radio" name="options" id="sNight4" autocomplete="off">4 Nights
+				  </label>
+				  <label class="btn btn-default">
+					<input type="radio" name="options" id="sNight5" autocomplete="off">5 Nights
+				  </label>
+				</div>
+				<br>
+				 <button type="button" class="btn btn-warning" id="submit2" value="Submit">Check Price</button>
+			  </form>
+			</div>
+			<div id="col3" class="col-lg-12 col-md-12 col-sm-12 col-sx-12">
+			  <h2 id="info">Affordable Suites</h2>
+			  <h3 id="info">$80.00 Nightly</h3>
+			  <form>
+				 <div class="btn-group" data-toggle="buttons">
+				  <label class="btn btn-default active">
+					<input type="radio" name="options" id="aNight1" autocomplete="off">1 Night
+				  </label>
+				  <label class="btn btn-default">
+					<input type="radio" name="options" id="aNight2" autocomplete="off">2 Nights
+				  </label>
+				  <label class="btn btn-default">
+					<input type="radio" name="options" id="aNight3" autocomplete="off">3 Nights
+				  </label>
+				  <label class="btn btn-default">
+					<input type="radio" name="options" id="aNight4" autocomplete="off">4 Nights
+				  </label>
+				  <label class="btn btn-default">
+					<input type="radio" name="options" id="aNight5" autocomplete="off">5 Nights
+				  </label>
+				</div>
+				<br>
+				 <button type="button" class="btn btn-warning" id="submit3" value="Submit">Check Price</button>
+			  </form>
+			</div>
+		</div> 
 	</article>
 	<script>
     function calcTotal1(){
